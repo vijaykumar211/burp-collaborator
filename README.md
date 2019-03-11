@@ -6,6 +6,8 @@
 4. set two txt record at _acme-challenge.burp.vjh1.com
 5. add these records in cloudflare.
 
+![DNS setting](https://github.com/vijaykumar211/burp-collaborator/blob/master/burp-collab-dns.png)
+
 
 # Burp Collaborator Server docker container with LetsEncrypt certificate
 
