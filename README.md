@@ -1,3 +1,12 @@
+#steps to install
+
+1. clone repo
+2. ./Run-this-first.sh
+3. ./init.sh burp.vjh1.com 12.13.55.22           (aws public ip)
+4. set two txt record at _acme-challenge.burp.vjh1.com
+5. add these records in cloudflare.
+
+
 # Burp Collaborator Server docker container with LetsEncrypt certificate
 
 This repository includes a set of scripts to install a Burp Collaborator Server in a docker environment, using a LetsEncrypt wildcard certificate.
