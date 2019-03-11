@@ -1,4 +1,4 @@
-#steps to install
+# steps to install ( tested in ubuntu 16 )
 
 1. clone repo
 2. ./Run-this-first.sh
