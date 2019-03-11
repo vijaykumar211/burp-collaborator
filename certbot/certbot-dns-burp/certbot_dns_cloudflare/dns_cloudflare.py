@@ -12,7 +12,7 @@ from certbot import interfaces
 from certbot.plugins import dns_common
 
 import subprocess
-
+from time import sleep
 
 logger = logging.getLogger(__name__)
 
@@ -69,6 +69,10 @@ class Authenticator(dns_common.DNSAuthenticator):
           return True
 
     def launch_dnsmasq(self,domain):
+         print  "Add these TXT records, sleeping 2 minutes."
+	     print self.chall01
+	     print self.chall02
+	     sleep(120)
          dnsmasq='/usr/sbin/dnsmasq -q --dns-rr='+domain+',257,000569737375656C657473656E63727970742E6F7267 --txt-record='+self.chall01_vn+',"'+self.chall01+'" --txt-record='+self.chall02_vn+',"'+self.chall02+'" --no-resolv --port=53' 
          print("DNSMASQ CMD: \n{}".format(dnsmasq))
          subprocess.Popen(dnsmasq, shell=True, stdout=subprocess.PIPE)
